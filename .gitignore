@@ -1,0 +1,5 @@
+/bin_*
+/build_*
+/log*
+/install*
+/package*

@@ -1,0 +1,46 @@
+{
+    "version": "0.2.0", 
+    "configurations": [
+        {
+            "name":"C++_Debug",
+            "type":"cppdbg",
+            "request":"launch",
+            "cwd":"${workspaceFolder}/bin_x64",
+            "program":"${workspaceFolder}/bin_x64/test",
+            "args":[],
+            "environment":[
+                {
+                    "name": "LD_LIBRARY_PATH",
+                    "value": "./:/opt/ros/noetic/lib"
+                }
+            ],
+            "stopAtEntry":false,
+            "externalConsole":false,
+            "MIMode":"gdb",
+            "miDebuggerPath":"gdb",
+            "setupCommands":[
+                {
+                "description":"为gdb启用整齐打印",
+                "text":"-enable-pretty-printing",
+                "ignoreFailures":true
+                }
+            ],
+            "presentation": {
+                "echo": true
+            }
+        },
+
+        {
+            "name":"Python_Debug",
+            "console":"integratedTerminal",
+            "type":"python",
+            "request":"launch",
+            "cwd": "${fileDirname}",
+            "program":"${file}",
+            "args": [],      // 传递给py文件的命令行参数, 逗号分开多个
+            "env": {
+                "PYTHONPATH": ""
+            }
+        }
+    ]
+}
